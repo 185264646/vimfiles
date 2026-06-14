@@ -1,0 +1,38 @@
+source $VIMRUNTIME/defaults.vim
+
+" Phones have small screen
+set tabstop=4
+set shiftwidth=4
+
+" remove /usr/include, add $PREFIX/include
+" For Termux
+set path-=/usr/include
+set path+=$PREFIX/include
+
+" enable :Man
+runtime ftplugin/man.vim
+
+" YouCompleteMe settings
+" Use system clangd rather than downloaded one
+let g:ycm_clangd_binary_path="clangd"
+
+call plug#begin('~/.vim/plugged')
+Plug 'ycm-core/YouCompleteMe', { 'do': './install.py' }
+call plug#end()
+
+imap <silent><C-L> <Plug>(YCMToggleSignatureHelp)
+
+" Template file
+let g:c_template_file=expand("~/.vim/templates/gen_c_template")
+" use templates for C source file
+autocmd BufNewFile *.c,*.h,*.cc,*.cpp if executable(g:c_template_file) | exec "0r! "..g:c_template_file | endif | $
+
+"netrw
+" make lists tree-like
+let g:netrw_liststyle=3
+" disable banner
+let g:netrw_banner=v:false
+"
+let g:netrw_browse_split=0
+" set wdith to 25%
+let g:netrw_winsize=25
