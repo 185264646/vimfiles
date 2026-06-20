@@ -1,0 +1,33 @@
+" Source vim default vimrc
+runtime! defaults.vim
+
+" :Man and K
+runtime! ftplugin/man.vim
+
+" YCM
+packadd! youcompleteme
+
+let g:ycm_global_ycm_extra_conf = '~/.vim/ycm_extra_conf.py'
+
+" Rust.vim
+packadd! rust.vim
+
+" Enable mouse
+set mouse=a
+set hidden
+
+"source .vimrc under this pwd
+"unless we are in ~/.vim
+if filereadable(".vimrc")
+	source .vimrc
+endif
+
+" YouCompleteMe hotkeys
+noremap <Leader>gd :YcmCompleter GoToDefinitionElseDeclaration<CR>
+noremap <Leader>gr :YcmCompleter GoToReferences<CR>
+
+" C autoindent
+" (0: for unclosed (, it will indent to the inner unclosed (.
+set cinoptions=(0
+
+iabbrev spdx_gpl!! SPDX-License-Identifier: GPL-2.0-or-later
