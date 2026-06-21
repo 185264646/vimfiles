@@ -2,15 +2,10 @@
 
 My personal vim config directory files
 
-## Usage
+## Install
 ### Unix
 ```bash
-sudo apt install -y vim-youcompleteme
-mkdir -p $HOME/.vim
-cd $HOME/.vim
-git init
-git remote add origin git@github.com:185264646/vimfiles.git
-git pull --set-upstream origin master
+curl -L https://github.com/185264646/vimfiles/raw/refs/heads/master/install.sh | sh
 ```
 
 ## Supported OS
