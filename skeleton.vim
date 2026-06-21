@@ -37,6 +37,6 @@ endfunction
 
 augroup my_skeleton
 	autocmd!
-	autocmd BufNewFile *.{c,h,cpp,hpp,cc,hh,c++} call s:insert_c_skeleton()
+	autocmd BufNewFile *.{c,h,cpp,hpp,cc,hh,c++,cxx} call s:insert_c_skeleton()
 	autocmd BufNewFile GNUmakefile,Makefile,makefile,Makefile.* call s:insert_makefile_skeleton()
 augroup END
