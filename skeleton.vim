@@ -4,7 +4,7 @@ function skeleton#generate_c_skeleton() abort
 
 	call add(l:rs, '// SPDX-License-Identifier: GPL-2.0-or-later')
 	call add(l:rs, '/*')
-	let l:copyright_line = substitute(' * Copyright (c) <year> Yang Xiwen <forbidden405@outlook.com>', '<year>', strftime('%Y'), '')
+	let l:copyright_line = printf(' * Copyright (c) %s Yang Xiwen <forbidden405@outlook.com>', strftime('%Y'))
 	call add(l:rs, l:copyright_line)
 	call add(l:rs, ' */')
 	" An empty line
