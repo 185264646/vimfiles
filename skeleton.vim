@@ -19,7 +19,26 @@ function skeleton#insert_c_skeleton() abort
 	call append(0, skeleton#generate_c_skeleton())
 endfunction
 
+function skeleton#generate_makefile_skeleton() abort
+	let l:rs = []
+
+	call add(l:rs, '# SPDX-License-Identifier: GPL-2.0-or-later')
+	let l:copyright_line = printf('# Copyright (c) %s Yang Xiwen <forbidden405@outlook.com>', strftime('%Y'))
+	call add(l:rs, l:copyright_line)
+	" An empty line
+	call add(l:rs, '')
+
+	return l:rs
+endfunction
+
+function skeleton#insert_makefile_skeleton() abort
+	" append automatically translates all \n to NUL in the string. It's annoying.
+	" This forces us to use a list rather than a string with \n
+	call append(0, skeleton#generate_makefile_skeleton())
+endfunction
+
 augroup my_skeleton
 	autocmd!
 	autocmd BufNewFile *.{c,h,cpp,hpp,cc,hh,c++} call skeleton#insert_c_skeleton()
+	autocmd BufNewFile GNUmakefile,Makefile,makefile,Makefile.* call skeleton#insert_makefile_skeleton()
 augroup END
