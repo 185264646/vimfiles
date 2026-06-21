@@ -11,9 +11,7 @@ set path+=$PREFIX/include
 " Use system clangd rather than downloaded one
 let g:ycm_clangd_binary_path="clangd"
 
-call plug#begin('~/.vim/plugged')
-Plug 'ycm-core/YouCompleteMe', { 'do': './install.py' }
-call plug#end()
+packadd! youcompleteme
 
 imap <silent><C-L> <Plug>(YCMToggleSignatureHelp)
 
