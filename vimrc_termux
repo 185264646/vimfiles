@@ -11,8 +11,6 @@ set path+=$PREFIX/include
 " Use system clangd rather than downloaded one
 let g:ycm_clangd_binary_path="clangd"
 
-packadd! youcompleteme
-
 imap <silent><C-L> <Plug>(YCMToggleSignatureHelp)
 
 "netrw

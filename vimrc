@@ -17,3 +17,7 @@ if os_detect#is_android_termux()
 elseif os_detect#is_gnu_linux()
 	runtime vimrc_gnu
 endif
+
+" This comes after vimrc so the global settings are updated before loading the
+" package
+packadd! youcompleteme
