@@ -20,8 +20,4 @@ endif
 noremap <Leader>gd :YcmCompleter GoToDefinitionElseDeclaration<CR>
 noremap <Leader>gr :YcmCompleter GoToReferences<CR>
 
-" C autoindent
-" (0: for unclosed (, it will indent to the inner unclosed (.
-set cinoptions=(0
-
 iabbrev spdx_gpl!! SPDX-License-Identifier: GPL-2.0-or-later

@@ -4,6 +4,11 @@ source $VIMRUNTIME/defaults.vim
 " For K and :Man
 source $VIMRUNTIME/ftplugin/man.vim
 
+" C/C++ indentation setting
+" (0: see :h cino-(
+" =0: see :h cino-=
+set cinoptions=(0=0
+
 runtime os_detect.vim
 
 if os_detect#is_android_termux()
