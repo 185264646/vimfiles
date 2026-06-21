@@ -1,6 +1,9 @@
 " Source defaults.vim, which sets up a lot of default settings.
 source $VIMRUNTIME/defaults.vim
 
+" For K and :Man
+source $VIMRUNTIME/ftplugin/man.vim
+
 runtime os_detect.vim
 
 if os_detect#is_android_termux()

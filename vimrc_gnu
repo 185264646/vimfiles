@@ -1,6 +1,3 @@
-" :Man and K
-runtime! ftplugin/man.vim
-
 " YCM
 packadd! youcompleteme
 
