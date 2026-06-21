@@ -10,6 +10,7 @@ source $VIMRUNTIME/ftplugin/man.vim
 set cinoptions=(0=0
 
 runtime os_detect.vim
+runtime skeleton.vim
 
 if os_detect#is_android_termux()
 	runtime vimrc_termux

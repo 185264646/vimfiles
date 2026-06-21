@@ -17,11 +17,6 @@ call plug#end()
 
 imap <silent><C-L> <Plug>(YCMToggleSignatureHelp)
 
-" Template file
-let g:c_template_file=expand("~/.vim/templates/gen_c_template")
-" use templates for C source file
-autocmd BufNewFile *.c,*.h,*.cc,*.cpp if executable(g:c_template_file) | exec "0r! "..g:c_template_file | endif | $
-
 "netrw
 " make lists tree-like
 let g:netrw_liststyle=3
