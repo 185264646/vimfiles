@@ -32,8 +32,6 @@ function s:generate_makefile_skeleton() abort
 endfunction
 
 function s:insert_makefile_skeleton() abort
-	" append automatically translates all \n to NUL in the string. It's annoying.
-	" This forces us to use a list rather than a string with \n
 	call append(0, s:generate_makefile_skeleton())
 endfunction
 
