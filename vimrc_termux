@@ -1,5 +1,3 @@
-source $VIMRUNTIME/defaults.vim
-
 " Phones have small screen
 set tabstop=4
 set shiftwidth=4

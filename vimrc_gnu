@@ -1,6 +1,3 @@
-" Source vim default vimrc
-runtime! defaults.vim
-
 " :Man and K
 runtime! ftplugin/man.vim
 
