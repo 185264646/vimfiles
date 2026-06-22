@@ -1,5 +1,3 @@
-let g:ycm_global_ycm_extra_conf = ''
-
 " Rust.vim
 packadd! rust.vim
 

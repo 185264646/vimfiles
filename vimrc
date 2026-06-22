@@ -20,4 +20,8 @@ endif
 
 " This comes after vimrc so the global settings are updated before loading the
 " package
+
+" Debian sets this to the dist-bundled conf file
+" override it to be empty, we don't need this
+let g:ycm_global_ycm_extra_conf = ''
 packadd! youcompleteme
