@@ -11,8 +11,4 @@ if filereadable(".vimrc")
 	source .vimrc
 endif
 
-" YouCompleteMe hotkeys
-noremap <Leader>gd :YcmCompleter GoToDefinitionElseDeclaration<CR>
-noremap <Leader>gr :YcmCompleter GoToReferences<CR>
-
 iabbrev spdx_gpl!! SPDX-License-Identifier: GPL-2.0-or-later

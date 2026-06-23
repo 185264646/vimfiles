@@ -24,4 +24,12 @@ endif
 " Debian sets this to the dist-bundled conf file
 " override it to be empty, we don't need this
 let g:ycm_global_ycm_extra_conf = ''
+
+" Prefer systemd clangd over ycm external one
+let g:ycm_clangd_binary_path="clangd"
+
+" YouCompleteMe hotkeys
+noremap <Leader>gd :YcmCompleter GoToDefinitionElseDeclaration<CR>
+noremap <Leader>gr :YcmCompleter GoToReferences<CR>
+
 packadd! youcompleteme

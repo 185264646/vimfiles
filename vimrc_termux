@@ -7,10 +7,6 @@ set shiftwidth=4
 set path-=/usr/include
 set path+=$PREFIX/include
 
-" YouCompleteMe settings
-" Use system clangd rather than downloaded one
-let g:ycm_clangd_binary_path="clangd"
-
 imap <silent><C-L> <Plug>(YCMToggleSignatureHelp)
 
 "netrw
