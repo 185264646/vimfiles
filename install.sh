@@ -14,4 +14,5 @@ else
 	git remote add origin git@github.com:185264646/vimfiles.git
 	git fetch
 	git reset FETCH_HEAD
+	echo "~/.vim is initialized. Backup all unsaved changed and then run \`git restore .\`"
 fi
