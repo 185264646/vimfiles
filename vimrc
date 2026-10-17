@@ -16,6 +16,8 @@ if os_detect#is_android_termux()
 	runtime vimrc_termux
 elseif os_detect#is_gnu_linux()
 	runtime vimrc_gnu
+elseif os_detect#is_macos()
+	runtime vimrc_macos
 endif
 
 " This comes after vimrc so the global settings are updated before loading the
