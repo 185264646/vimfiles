@@ -9,6 +9,13 @@ source $VIMRUNTIME/ftplugin/man.vim
 " =0: see :h cino-=
 set cinoptions=(0=0
 
+" tmux
+" see :help tmux-integration
+if !has('gui_running') && &term =~ '^\%(screen\|tmux\)'
+	" Better mouse support
+	set ttymouse=sgr
+endif
+
 runtime os_detect.vim
 runtime skeleton.vim
 
