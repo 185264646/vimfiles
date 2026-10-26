@@ -37,6 +37,12 @@ endfunction
 
 augroup my_skeleton
 	autocmd!
+	" C/C++ sources and headers
 	autocmd BufNewFile *.{c,h,cpp,hpp,cc,hh,c++,cxx} call s:insert_c_skeleton()
+	" Makefile
 	autocmd BufNewFile GNUmakefile,\cmakefile,Makefile.* call s:insert_shell_like_skeleton()
+	" Shell scripts
+	autocmd BufNewFile *.{bash,sh} call s:insert_shell_like_skeleton()
+	" Python scripts
+	autocmd BufNewFile *.py call s:insert_shell_like_skeleton()
 augroup END
