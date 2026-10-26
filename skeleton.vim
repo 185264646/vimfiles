@@ -19,7 +19,7 @@ function s:insert_c_skeleton() abort
 	call append(0, s:generate_c_skeleton())
 endfunction
 
-function s:generate_makefile_skeleton() abort
+function s:generate_shell_like_skeleton() abort
 	let l:rs = []
 
 	call add(l:rs, '# SPDX-License-Identifier: GPL-2.0-or-later')
@@ -31,12 +31,12 @@ function s:generate_makefile_skeleton() abort
 	return l:rs
 endfunction
 
-function s:insert_makefile_skeleton() abort
-	call append(0, s:generate_makefile_skeleton())
+function s:insert_shell_like_skeleton() abort
+	call append(0, s:generate_shell_like_skeleton())
 endfunction
 
 augroup my_skeleton
 	autocmd!
 	autocmd BufNewFile *.{c,h,cpp,hpp,cc,hh,c++,cxx} call s:insert_c_skeleton()
-	autocmd BufNewFile GNUmakefile,\cmakefile,Makefile.* call s:insert_makefile_skeleton()
+	autocmd BufNewFile GNUmakefile,\cmakefile,Makefile.* call s:insert_shell_like_skeleton()
 augroup END
